@@ -13,8 +13,8 @@ public class Main {
        // int clientDeviceYear = 2015;
        // String a = validateDeviceAndYear(clientOS, clientDeviceYear);
        //String b = validateDeviceAndYear(2, clientDeviceYear);
-       // String c = validateDeviceAndYear(1, 2015);
-
+        String c = validateDeviceAndYear(1, 2015);
+        System.out.println(c);
     }
 
     //task2
