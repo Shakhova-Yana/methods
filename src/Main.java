@@ -9,12 +9,12 @@ public class Main {
         System.out.println();
 //task2
 
-        int clientOS = 1;
-        int clientDeviceYear = 2015;
+      // int clientOS = 1;
+       // int clientDeviceYear = 2015;
        // String a = validateDeviceAndYear(clientOS, clientDeviceYear);
        //String b = validateDeviceAndYear(2, clientDeviceYear);
        // String c = validateDeviceAndYear(1, 2015);
-        System.out.println(validateDeviceAndYear(clientDeviceYear));
+
     }
 
     //task2
