@@ -7,17 +7,25 @@ public class Main {
         int year = new Scanner(System.in).nextInt();
         checkYearIsLeapAndPrint(year);
         System.out.println();
-//task2
 
-      // int clientOS = 1;
-       // int clientDeviceYear = 2015;
-       // String a = validateDeviceAndYear(clientOS, clientDeviceYear);
-       //String b = validateDeviceAndYear(2, clientDeviceYear);
-        String c = validateDeviceAndYear(1, 2015);
-        System.out.println(c);
+//task2
+        int clientDeviceYear = 2015;
+        String  deviceAndYear = validateDeviceAndYear(1, clientDeviceYear);
+        System.out.println(deviceAndYear);
     }
 
-    //task2
+//task1
+    public static void checkYearIsLeapAndPrint(int yearInsideThisMethod) {
+        boolean leapYearConditions = (yearInsideThisMethod % 400 == 0) || (yearInsideThisMethod % 4 == 0 && yearInsideThisMethod % 100 != 0);
+        boolean validYear = yearInsideThisMethod >= 1584;
+        if (validYear && leapYearConditions) {
+            System.out.printf("%s год - високосный год", yearInsideThisMethod);
+        } else {
+            System.out.printf("%s год - не високосный год", yearInsideThisMethod);
+        }
+    }
+
+//task2
     public static String validateDeviceAndYear(int deviceType, int year) {
         int currentYear = LocalDate.now().getYear();
         if (deviceType == 0 && year < currentYear) {
@@ -30,17 +38,6 @@ public class Main {
             return "Установите версию приложение для Android по ссылке";
         } else {
             return "Такая версия не поддерживается";
-        }
-    }
-
-    //task1
-    public static void checkYearIsLeapAndPrint(int yearInsideThisMethod) {
-        boolean leapYearConditions = (yearInsideThisMethod % 400 == 0) || (yearInsideThisMethod % 4 == 0 && yearInsideThisMethod % 100 != 0);
-        boolean validYear = yearInsideThisMethod >= 1584;
-        if (validYear && leapYearConditions) {
-            System.out.printf("%s год - високосный год", yearInsideThisMethod);
-        } else {
-            System.out.printf("%s год - не високосный год", yearInsideThisMethod);
         }
     }
 }
